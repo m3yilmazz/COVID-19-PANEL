@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "About";
+}
+<header>
+    <style>
+        .btn-link {
+            color: black;
+        }
+    </style>
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="~/covid19_image.tif" alt="covid19_image" style="width: 1110px;">
+
+            <div class="carousel-caption" style="background: rgba(102, 102, 102, 0.6); top: auto; bottom: 40%;">
+                <h1>LEARN CORONAVIRUS DISEASE</h1>
+                
+                <p style="font-size: 20px">
+                    Here it is. Everything you need to know about Coronavirus (COVID-19) disease.
+                    <br />
+                    <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank" style="color: white;">Please visit WHO for more information via this link.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration:none;">
+                    <h3>▼ Overview</h3>
+                </button>
+            </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="overviewPanel" class="card-body">
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-decoration:none;">
+                    <h3>▼ Preventation</h3>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div id="preventationPanel" class="card-body">
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="text-decoration:none;">
+                    <h3>▼ Symptoms</h3>
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div id="symptomsPanel" class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>

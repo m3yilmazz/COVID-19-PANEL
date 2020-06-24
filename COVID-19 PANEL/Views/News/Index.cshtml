@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "News";
+}
+
+<header>
+    <link rel="stylesheet" type="text/css" href="~/css/news.css" />
+</header>
+<h1>News</h1>
+
+<div class="container">
+    <div id="liveStream">
+        <div class="row">
+            <h3>Livestream</h3>
+        </div>
+
+        <div class="row">
+            <button id="btnTRTHaber" value="TRTHaber" type="button" class="btn mr-2 btn-outline-dark">TRT Haber</button>
+            <button id="btnNTV" value="NTV" type="button" class="btn mr-2 btn-outline-dark">NTV</button>
+            <button id="btnEuronewsEnglish" value="EuronewsEnglish" type="button" class="btn mr-2 btn-outline-dark">Euronews English</button>
+        </div>
+
+        <div class="row mt-2">
+            <div id="divTRTHaber">
+                <iframe width="1000" height="550" src="https://www.youtube.com/embed/u5z7AH4bEps" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div style="display: none;" id="divNTV">
+                <iframe width="1000" height="550" src="https://www.youtube.com/embed/XEJM4Hcgd3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div style="display: none;" id="divEuronewsEnglish">
+                <iframe width="1000" height="550" src="https://www.youtube.com/embed/6xrJy-1_qS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <br /><br /><br />
+
+    <div id="breakingNews" class="row mt-2" style="width: 1024px; height: 576px;">
+        <h3>Breaking News</h3><br />
+        <div id="breakingNewsCarouselDiv" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#breakingNewsCarouselDiv" data-slide-to="0" class="active"></li>
+                <li data-target="#breakingNewsCarouselDiv" data-slide-to="1"></li>
+                <li data-target="#breakingNewsCarouselDiv" data-slide-to="2"></li>
+            </ol>
+            <div id="breakingNewsCarouselInner" class="carousel-inner">
+                <!--Append by JS-->
+            </div>
+            <a class="carousel-control-prev" href="#breakingNewsCarouselDiv" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#breakingNewsCarouselDiv" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <br /><br /><br />
+    <div id="TRNews mt-5" class="row">
+        <div class="col-12" style="padding: 0px;">
+            <h3>Turkey News</h3>
+        </div>
+
+        <div id="TRNewsFlipCardRow" class="row">
+            <!--Append by JS-->
+        </div>
+
+    </div>
+    <br /><br /><br />
+    <div id="worldNews mt-5" class="row">
+        <h3>World News</h3><br />
+        <div id="worldNewsCardDeck" class="card-deck">
+            <!--Append by JS-->
+        </div>
+    </div>
+</div>

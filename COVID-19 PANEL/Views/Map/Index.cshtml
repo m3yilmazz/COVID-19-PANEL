@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Map";
+}
+
+<h1>Map</h1>
+<h5>You can interact with the map. Just move the mouse any country you want to see their numbers.</h5>
+
+<div id="mapDiv" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+
+<br />
+
+<h1>Top 10 Countries</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Country</th>
+            <th scope="col" style="text-align: center;">Cumulative Cases</th>
+            <th scope="col" style="text-align: center;">Cumulative Deaths</th>
+        </tr>
+    </thead>
+    <tbody id="tableBodyTop10">
+        
+    </tbody>
+</table>
