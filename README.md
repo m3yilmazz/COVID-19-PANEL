@@ -6,3 +6,11 @@ This projects works like that:
 * Then, user can use the web project.
 
 ASP.NET Core used in back-end which starts the download sequence.
+
+## Let's look at some screenshots of tabs:
+
+![covid-19-panel-home-page](https://user-images.githubusercontent.com/47794672/98699406-2b112380-2388-11eb-8e71-cc42b7df0139.png)
+
+![covid-19-panel-map-page](https://user-images.githubusercontent.com/47794672/98699430-31070480-2388-11eb-966e-5fb46be59286.png)
+
+![covid-19-panel-chart-page](https://user-images.githubusercontent.com/47794672/98699435-32383180-2388-11eb-9e0d-d730ae22a3a0.png)
