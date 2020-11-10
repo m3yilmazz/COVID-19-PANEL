@@ -1,12 +1,13 @@
 ﻿$(document).ready(function () {
     $.getJSON("covid19.json", function (jsonResult) {
+        
         $("#chartDiv").empty();
         $("#cumulativeChartDiv").empty();
-        
+
         var length = jsonResult.records.length;
 
         var compGeoId = jsonResult.records[0].geoId;
-        
+
         for (var i = 0; i < length; i++) {
             if (i == 0) {
                 $("#countryDropDownList").append('<option value="0">Country Name</option>');
@@ -35,20 +36,20 @@
             var multiDimensionalCumulativeDataArray = new Array();
             var cumulativeCases = 0;
             var cumulativeDeaths = 0;
-            
+
             for (var i = 0; i < length; i++) {
                 if ($("#countryDropDownList").val() == jsonResult.records[i].geoId) {
                     multiDimensionalDataArray.push([jsonResult.records[i].dateRep,
-                                                    parseInt(jsonResult.records[i].cases),
-                                                    parseInt(jsonResult.records[i].deaths)]);
+                    parseInt(jsonResult.records[i].cases),
+                    parseInt(jsonResult.records[i].deaths)]);
 
                     //Calculation of cumulative numbers.
                     cumulativeCases += parseInt(jsonResult.records[i].cases);
                     cumulativeDeaths += parseInt(jsonResult.records[i].deaths);
 
                     multiDimensionalCumulativeDataArray.push([jsonResult.records[i].dateRep,
-                                                                cumulativeCases,
-                                                                cumulativeDeaths]);
+                        cumulativeCases,
+                        cumulativeDeaths]);
 
                     //Getting country name.
                     if (countryName === undefined) {

@@ -6,6 +6,7 @@ using COVID_19_PANEL.Models;
 using System.Net;
 using Microsoft.AspNetCore.Hosting;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace COVID_19_PANEL.Controllers
 {
@@ -22,13 +23,10 @@ namespace COVID_19_PANEL.Controllers
 
         public IActionResult Index()
         {
-            //Download the latest json file.
-            var url = "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/";
-            var nameOfFile = "covid19.json";
-            var filePath = Path.Combine(_webHostEnvironment.WebRootPath, nameOfFile);
-            WebClient webClient = new WebClient();
-            webClient.DownloadFile(new Uri(url), filePath);
-        
+            string url = "https://opendata.ecdc.europa.eu/covid19/casedistribution/json/";
+            string nameOfFile = "covid19.json";
+            downloadFile(url, nameOfFile);
+
             return View();
         }
 
@@ -37,6 +35,16 @@ namespace COVID_19_PANEL.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        
+        private void downloadFile(string url, string nameOfFile)
+        {
+            //Download the latest json file.
+            var _url = url;
+            var _nameOfFile = nameOfFile;
+            var filePath = Path.Combine(_webHostEnvironment.WebRootPath, _nameOfFile);
+            WebClient webClient = new WebClient();
+            webClient.DownloadFileAsync(new Uri(_url), filePath);
         }
     }
 }

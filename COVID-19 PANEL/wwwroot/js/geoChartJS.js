@@ -1,7 +1,5 @@
 ﻿$(document).ready(function () {
-    
     $.getJSON("covid19.json", function (jsonResult) {
-
         var length = jsonResult.records.length;
         var compGeoId = jsonResult.records[0].geoId.replace("UK", "GB");
 
